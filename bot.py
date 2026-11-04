@@ -28,8 +28,8 @@ ADMIN_CHANNEL = "C0B2NTD8DT6"
 ADMIN_USER = "U0A9NJB217B"
 ADMIN_USERS = ["U0A9NJB217B", "U06BEBPV6CE", "U08LCQR3BBK"]
 
-PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY", "pcsk_36APWc_MhxapzxeUveaZu1CCmSQgSaRsHgFNgy1d7777wkZgYs2PNWFgRULPmYniwWTtdy")
-VOYAGE_API_KEY = os.environ.get("VOYAGE_API_KEY", "pa-XfIYHO-YOtcroKMitig66-uAV4fUKmUPnrO69gYojMd")
+PINECONE_API_KEY = os.environ["PINECONE_API_KEY"]
+VOYAGE_API_KEY = os.environ["VOYAGE_API_KEY"]
 
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index("tia-docs")
