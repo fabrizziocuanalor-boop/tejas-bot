@@ -126,4 +126,5 @@ tejas-bot/
 
 ## Tools
 
-Python, Slack Bolt, Anthropic Claude API (claude-opus-4-5), Google Drive API, Pinecone, Voyage AI (voyage-3), Railway, RAG architecture
+Python, Slack Bolt, Anthropic Claude API (claude-opus-4-5), Google Drive API, Pinecone, Voyage AI (voyage-3), Railway, RAG architecture 
+.
