@@ -15,8 +15,8 @@ load_dotenv()
 SCOPES = ["https://www.googleapis.com/auth/drive.readonly"]
 CREDENTIALS_FILE = "credentials.json"
 FOLDER_ID = "11_WUZ0BmlAugr5KiJpwNmx4QqnojgqM4"
-PINECONE_API_KEY = "pcsk_36APWc_MhxapzxeUveaZu1CCmSQgSaRsHgFNgy1d7777wkZgYs2PNWFgRULPmYniwWTtdy"
-VOYAGE_API_KEY = "pa-XfIYHO-YOtcroKMitig66-uAV4fUKmUPnrO69gYojMd"
+PINECONE_API_KEY = os.environ["PINECONE_API_KEY"]
+VOYAGE_API_KEY = os.environ["VOYAGE_API_KEY"]
 
 def get_drive_service():
     creds = service_account.Credentials.from_service_account_file(
