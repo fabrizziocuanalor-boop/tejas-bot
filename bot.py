@@ -216,7 +216,11 @@ def search_relevant_docs(question, top_k=8):
             model="voyage-3",
             input_type="query"
         ).embeddings[0]
+    except Exception as e:
+        print(f"VOYAGE ERROR: {type(e).__name__}: {e}")
+        return f"Error searching documents: {e}"
 
+    try:
         results = index.query(
             vector=embedding,
             top_k=top_k,
@@ -239,6 +243,7 @@ def search_relevant_docs(question, top_k=8):
 
         return docs_text if docs_text else "No relevant documents found."
     except Exception as e:
+        print(f"PINECONE ERROR: {type(e).__name__}: {e}")
         return f"Error searching documents: {e}"
 
 def ask_claude(question, docs):
